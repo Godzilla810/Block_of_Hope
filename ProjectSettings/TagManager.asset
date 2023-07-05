@@ -7,6 +7,7 @@ TagManager:
   - floor
   - camera
   - wall
+  - Item
   layers:
   - Default
   - TransparentFX
@@ -17,10 +18,10 @@ TagManager:
   - Floor
   - Object
   - Interactable
+  - Enemy
   - Player
   - MirecleBlock
   - Wall
-  - 
   - 
   - 
   - 
@@ -47,9 +48,18 @@ TagManager:
   - name: Portal
     uniqueID: 2417667447
     locked: 0
+  - name: Object
+    uniqueID: 2537712899
+    locked: 0
+  - name: Enemy
+    uniqueID: 553252413
+    locked: 0
   - name: Player
     uniqueID: 1538331349
     locked: 0
   - name: MB
     uniqueID: 2590661447
+    locked: 0
+  - name: Wall
+    uniqueID: 1702654041
     locked: 0

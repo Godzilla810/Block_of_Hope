@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2192684555642537753}
   - component: {fileID: 8998460746921347364}
   - component: {fileID: 3865416930212862890}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: wall
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -11088,8 +11088,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1702654041
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 1.42, y: 2.06, z: 0}
@@ -11146,7 +11146,7 @@ GameObject:
   - component: {fileID: 1429986793879470985}
   - component: {fileID: 2261643040110421023}
   - component: {fileID: 1837515970922070545}
-  m_Layer: 10
+  m_Layer: 6
   m_Name: floor
   m_TagString: floor
   m_Icon: {fileID: 0}
@@ -26627,7 +26627,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4787542658206230988}
   - component: {fileID: 7260933095675870119}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26649,7 +26649,7 @@ Transform:
   - {fileID: 1878588546720240125}
   - {fileID: 1429986793879470985}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!156049354 &7260933095675870119
 Grid:

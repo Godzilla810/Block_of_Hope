@@ -20,17 +20,12 @@ public class PlayerTrigger : MonoBehaviour
             Debug.Log("p");
             Interact();
         }
-        // if (Input.GetKeyDown(KeyCode.Space)){
-        //     //Launch a projectile from the player
-        //     Instantiate(MB, transform.position, transform.rotation);
-        //     //Instantiate:create copy;(object,position,rotation)
-        // }
     }
     void Interact(){
         Vector3 facingDir = new Vector3(animator.GetFloat("moveX"), animator.GetFloat("moveY"));
         Vector3 interactPos = transform.position + facingDir;
 
-        Collider2D collider = Physics2D.OverlapCircle(interactPos, 0.2f, interactableLayer);
+        Collider2D collider = Physics2D.OverlapCircle(interactPos, 1f, interactableLayer);
         if (collider != null){
             Debug.Log("ok");
             collider.gameObject.GetComponent<DialogTrigger>().TriggerDialog();

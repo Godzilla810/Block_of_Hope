@@ -35,12 +35,12 @@ public class DialogManager : MonoBehaviour
     }
 
     public void DisplayNextSentence(){
-        Debug.Log("Nect");
+        Debug.Log("Next");
 
-        if (sentences.Count == 0){
-            EndDialog();
-            return;
-        }
+        // if (sentences.Count == 0){
+        //     EndDialog();
+        //     return;
+        // }
         
         string word = sentences.Dequeue();
         // describeText.text = word;
@@ -54,6 +54,8 @@ public class DialogManager : MonoBehaviour
             describeText.text += letter;
             yield return new WaitForSeconds(0.2f);
         }
+        yield return new WaitForEndOfFrame();
+        EndDialog();
     }
 
 

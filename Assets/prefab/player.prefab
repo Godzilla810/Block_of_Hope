@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 9193833957919312811}
   - component: {fileID: 6131874307608330207}
   - component: {fileID: 7358485435191378477}
-  m_Layer: 6
+  - component: {fileID: 6475216259855593234}
+  m_Layer: 10
   m_Name: player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -36,7 +37,7 @@ Transform:
   m_Children:
   - {fileID: 7536258465822523476}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5211597507966521545
 SpriteRenderer:
@@ -76,9 +77,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingLayerID: 1538331349
+  m_SortingLayer: 4
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 926b5cd6f8fd57b4ebb99b65b4898659, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -177,10 +178,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1289d90a272aaea48bf6b696417dc67a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 40
-  isMove: 0
-  spawnPoint: {fileID: 9130690222051237908}
-  MBPrefab: {fileID: 5686963383704781287, guid: 97f9f3f7db40e224988cf3501d0bf7b3, type: 3}
+  MB: {fileID: 0}
+  shootPoint: {fileID: 7536258465822523476}
+  shootForce: 20
+  pullForce: 10
+  maxDistance: 5
+  isHold: 0
 --- !u!95 &7358485435191378477
 Animator:
   serializedVersion: 5
@@ -202,6 +205,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6475216259855593234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4517584331618239244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef1ff23ddc2e8d4ebc455558b309ac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &9130690222051237908
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,7 +229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7536258465822523476}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: spawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
