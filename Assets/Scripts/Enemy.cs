@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player != null){
+        if (player != null && !BtnForEnd.instance.isPause){
             float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
             if (distanceToPlayer <= attackRange){
                 Vector3 lookDirection = (player.transform.position - transform.position).normalized;

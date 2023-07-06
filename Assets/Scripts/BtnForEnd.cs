@@ -5,12 +5,28 @@ using UnityEngine.UI;
 
 public class BtnForEnd : MonoBehaviour
 {
-    public GameObject canvas;
+    //實例化
+    public static BtnForEnd instance;
+    void Awake() {
+        if (instance != null){
+            Debug.LogError("More than one BtnManager in scene!");
+            return;
+        }
+        instance = this;
+    }
 
-    public void ShowKeepMenu(){
+    public GameObject canvas;
+    public bool isPause = false;
+
+    public void Pause(){
+        isPause = true;
+        ShowMenu();
+    }
+    public void ShowMenu(){
         canvas.SetActive(true);
     }
     public void GameEnd(){
         Debug.Log("Game Over");
     }
+
 }

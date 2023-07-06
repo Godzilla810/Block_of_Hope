@@ -17,20 +17,22 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float inputX = Input.GetAxis("Horizontal");
-        float inputY = Input.GetAxis("Vertical");
+        if( !BtnForEnd.instance.isPause){
+            float inputX = Input.GetAxis("Horizontal");
+            float inputY = Input.GetAxis("Vertical");
 
-        if ( inputX != 0 || inputY !=0 ){
-            animator.SetBool("isWalk", true);
-            animator.SetFloat("moveX", inputX);
-            animator.SetFloat("moveY", inputY);
+            if ( inputX != 0 || inputY !=0 ){
+                animator.SetBool("isWalk", true);
+                animator.SetFloat("moveX", inputX);
+                animator.SetFloat("moveY", inputY);
+            }
+            else{
+                animator.SetBool("isWalk", false);
+            }
+
+            transform.Translate(Vector3.right * inputX * moveSpeed * Time.deltaTime + 
+            Vector3.up * inputY * moveSpeed * Time.deltaTime, Space.World);
+
         }
-        else{
-            animator.SetBool("isWalk", false);
-        }
-
-        transform.Translate(Vector3.right * inputX * moveSpeed * Time.deltaTime + 
-        Vector3.up * inputY * moveSpeed * Time.deltaTime, Space.World);
-
     }
 }
