@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
@@ -31,11 +32,17 @@ public class Enemy : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             Destroy(other.gameObject);
+            Restart();
         }
     }
     void OnDrawGizmosSelected()     //在Scene視圖中繪製調試或可視化信息的圖形元素
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
+    }
+
+    public void Restart(){
+        Debug.Log("Restart");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
