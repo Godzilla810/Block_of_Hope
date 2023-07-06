@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BtnForEnd : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class BtnForEnd : MonoBehaviour
         canvas.SetActive(true);
     }
     public void GameEnd(){
-        Debug.Log("Game Over");
+        SceneManager.LoadScene(04);
     }
 
 }

@@ -43,6 +43,6 @@ public class Enemy : MonoBehaviour
 
     public void Restart(){
         Debug.Log("Restart");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(05);
     }
 }
