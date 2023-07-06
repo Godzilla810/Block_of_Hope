@@ -26,6 +26,13 @@ public class BtnForEnd : MonoBehaviour
     public void ShowMenu(){
         canvas.SetActive(true);
     }
+    public void Keep(){
+        isPause = false;
+        HideMenu();
+    }
+    public void HideMenu(){
+        canvas.SetActive(false);
+    }
     public void GameEnd(){
         SceneManager.LoadScene(04);
     }

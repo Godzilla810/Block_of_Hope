@@ -8,6 +8,7 @@ TagManager:
   - camera
   - wall
   - Item
+  - mb
   layers:
   - Default
   - TransparentFX
