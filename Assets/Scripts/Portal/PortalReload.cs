@@ -15,6 +15,6 @@ public class PortalReload : MonoBehaviour
     }
     public void Reload(){
         Debug.Log("Reload");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(06);
     }
 }
